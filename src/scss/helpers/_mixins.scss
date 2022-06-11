@@ -1,0 +1,8 @@
+
+@use "../helpers/variables" as var;
+
+@mixin tablet {
+    @media (max-width: var.$tablet) {
+        @content;
+    }
+}

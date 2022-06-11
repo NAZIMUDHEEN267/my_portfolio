@@ -1,0 +1,30 @@
+@use "../helpers/variables" as var;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  background: var.$bg;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.animation {
+  @for $num from 0 to 4 {
+    .link-#{$num} {
+      animation: drop 300ms ($num * 60ms) ease-in-out forwards;
+    }
+  }
+
+  display: initial !important;
+}

@@ -1,0 +1,74 @@
+@use "../helpers/variables" as var;
+@use "../animations/drop" as drop;
+
+.header {
+  width: 100%;
+  background: var.$bg;
+
+  .nav {
+    position: sticky;
+    z-index: 10;
+    max-width: 960px;
+    padding: 1rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: var.$bg;
+
+    &__links {
+      display: flex;
+      align-items: center;
+
+      li {
+        position: relative;
+        margin-left: 1rem;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -20%;
+          width: 0%;
+          height: 1.7px;
+          background: var.$white;
+          transition: all ease 0.2s 0.2s;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .drop__links {
+    perspective: 1000px;
+    display: none;
+
+    li {
+      transform: translateY(-50%);
+      border-top: 1px solid var.$bg-light;
+      padding: 0.5rem;
+      transform-origin: top center;
+
+      & :hover {
+        color: var.$crimson;
+      }
+    }
+
+    .link-3 {
+      border-bottom: 1px solid var.$bg-light;
+    }
+  }
+
+  .nav__bars {
+    display: none;
+
+    .bar__icon {
+      cursor: pointer;
+      background: var.$crimson;
+      font-size: 2.5rem;
+      padding: 0.2rem;
+    }
+  }
+}

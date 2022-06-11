@@ -1,0 +1,15 @@
+
+@use "../helpers/mixins" as mixin;
+
+
+.header .nav .nav__links {
+    @include mixin.tablet {
+        display: none;
+    }
+}
+
+.header .nav .nav__bars {
+    @include mixin.tablet {
+        display: block;
+    }
+}

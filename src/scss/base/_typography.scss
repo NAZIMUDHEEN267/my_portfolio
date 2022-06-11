@@ -1,0 +1,38 @@
+@use "../helpers/variables" as var;
+
+// poppins font
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+// open sans
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+html {
+  font-size: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+a {
+  color: var.$white;
+}
+
+.header {
+.nav {
+  &__name {
+    font-size: 1.2rem;
+  }
+
+  &__links {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.1rem;
+
+    a {
+      color: var.$text-light;
+    }
+  }
+}
+
+.drop__links {
+  font-weight: var.$medium;
+  letter-spacing: 1px;
+}
+}
