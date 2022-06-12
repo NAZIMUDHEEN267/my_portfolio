@@ -1,0 +1,47 @@
+
+@use "../helpers/variables" as var;
+@use "../helpers/functions" as fun;
+
+.description {
+    text-align: left;
+    margin-left: 2rem;
+
+    .tools, .skills, .work{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .border {
+        margin: 0 1rem 1rem 0;
+        padding: .5rem 1rem;
+        color: darken(var.$white, 30);
+        border: 1px solid darken(var.$white, 70);
+        border-radius: 1rem;
+
+        &:hover {
+            border-color: darken(var.$white, 30);
+        }
+
+    }
+
+    .work li {
+        margin: 0 1rem 1rem 0;
+
+        span {
+            margin-right: .5rem;
+            display: inline-block;
+            line-height: 40px;
+            text-align: center;
+            font-size: fun.convertor(13);
+            height: fun.convertor(40);
+            width: fun.convertor(40);
+            border-radius: 50%;
+            background-color: var.$crimson;
+        }
+
+        small {
+            color: darken(var.$white, 50);
+            font-weight: var.$normal;
+        }
+    }
+}

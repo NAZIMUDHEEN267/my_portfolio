@@ -7,7 +7,7 @@ import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
 const Home = function () {
     return (
-        <div className="home width" id="home">
+        <div className="home width" id="home width">
 
             {/* home text field */}
             <div className="home__text">
@@ -26,7 +26,7 @@ const Home = function () {
 
                 <p> Passionate in building new things, moving on "MERN" stack developer </p>
 
-                <button className="home-btn">
+                <button className="btn">
                     <a href="#contact">contact me</a>
                 </button>
             </div>

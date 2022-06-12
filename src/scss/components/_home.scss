@@ -39,44 +39,6 @@
       font-size: 3rem;
 
     }
-
-    .home-btn {
-      position: relative;
-      padding: fun.mul(.7) fun.mul(2);
-      background: var.$white;
-      border: none;
-      z-index: 3;
-      cursor: pointer;
-      color: initial;
-      border-radius: 0.3rem;
-
-      a {
-        position: relative;
-        z-index: 3;
-        color: initial;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 0%;
-        height: 100%;
-        border-radius: inherit;
-        color: var.$white;
-        background-color: var.$crimson !important;
-        transition: all ease-in 0.2s 0.1s;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
-
-      &:hover a {
-        color: var.$white;
-      }
-    }
   }
 
   //   home hero portion

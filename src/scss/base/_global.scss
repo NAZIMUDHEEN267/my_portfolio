@@ -1,5 +1,6 @@
 // importing variable module
 @use "../helpers/variables" as var;
+@use "../helpers/functions" as fun;
 
 * {
   margin: 0;
@@ -21,9 +22,48 @@ a {
   text-decoration: none;
 }
 
+// button class
+.btn {
+  position: relative;
+  padding: fun.mul(0.7) fun.mul(2);
+  background: var.$white;
+  border: none;
+  z-index: 3;
+  cursor: pointer;
+  color: initial;
+  border-radius: 0.3rem;
+
+  a {
+    position: relative;
+    z-index: 3;
+    color: initial;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    color: var.$white;
+    background-color: var.$crimson !important;
+    transition: all ease-in 0.2s 0.1s;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  &:hover a {
+    color: var.$white;
+  }
+}
+
 .width {
   max-width: 1140px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 // shadow text
@@ -41,4 +81,41 @@ a {
   }
 
   display: initial !important;
+}
+
+// container
+.container {
+  padding: var.$pd-y;
+
+  .text-center {
+    text-align: center;
+    font-size: fun.convertor(100);
+  }
+}
+
+// headline for container
+.headline {
+  position: relative;
+  text-align: center;
+  font-size: fun.convertor(45);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    width: 5%;
+    height: 4%;
+    background-color: var.$crimson;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 38%;
+    width: 5%;
+    height: 4%;
+    background-color: var.$crimson;
+  }
 }
