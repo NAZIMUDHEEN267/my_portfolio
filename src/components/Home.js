@@ -14,6 +14,11 @@ const Home = function () {
                 <h3>Hi There, I'm</h3>
                 <h1>Nazimudheen Ti</h1>
 
+                {/* shadow text */}
+                <h2 className="shadow home-shadow">
+                    nazim
+                </h2>
+
                 {/* wave animation library */}
                 <h3 className="wave">
                     <Wave text="Web Developer" effectChange={.6} speed={5} />

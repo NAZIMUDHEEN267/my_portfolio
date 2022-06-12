@@ -12,6 +12,8 @@
   //  home text portion
   &__text {
     flex: 1;
+    position: relative;
+
     h1 {
       position: relative;
 
@@ -24,6 +26,18 @@
         height: 3px;
         background: var.$crimson;
       }
+    }
+
+    .home-shadow {
+      position: absolute;
+      z-index: -1;
+      left: -10%;
+      top: -17%;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      font-size: 3rem;
+
     }
 
     .home-btn {
@@ -76,6 +90,7 @@
     .bgImg {
       position: relative;
       z-index: 1;
+      overflow: hidden;
       width: fun.mul(33);
       animation: rotate 55s 0.1s ease-in infinite;
 

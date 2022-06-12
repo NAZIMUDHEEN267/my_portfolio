@@ -26,6 +26,12 @@ a {
   margin: auto;
 }
 
+// shadow text
+.shadow {
+  -webkit-text-stroke: 1px var.$bg-light;
+  color: var.$bg;
+}
+
 // animation class for drop down menu
 .animation {
   @for $num from 0 to 5 {
