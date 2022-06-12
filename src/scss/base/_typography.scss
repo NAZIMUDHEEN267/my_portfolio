@@ -15,24 +15,51 @@ a {
   color: var.$white;
 }
 
+// header section
 .header {
-.nav {
-  &__name {
-    font-size: 1.2rem;
-  }
+  .nav {
+    &__name {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    }
 
-  &__links {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.1rem;
+    &__links {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.1rem;
 
-    a {
-      color: var.$text-light;
+      a {
+        color: var.$text-light;
+      }
     }
   }
+
+  .drop__links {
+    font-weight: var.$medium;
+    letter-spacing: 1px;
+  }
 }
 
-.drop__links {
-  font-weight: var.$medium;
-  letter-spacing: 1px;
-}
+// home section
+.home__text {
+  > * {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    font-size: 2.9rem;
+    white-space: no-wrap;
+    letter-spacing: 2px;
+
+  }
+
+  p {
+    color: var.$text-light;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    font-weight: var.$medium;
+    text-transform: capitalize;
+    font-size: large;
+  }
 }

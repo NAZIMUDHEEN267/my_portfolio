@@ -1,8 +1,16 @@
 
 @use "../helpers/variables" as var;
 
+// tablet size media query
 @mixin tablet {
     @media (max-width: var.$tablet) {
+        @content;
+    }
+}
+
+// mobile size media query
+@mixin mobile {
+    @media (max-width: var.$mobile) {
         @content;
     }
 }

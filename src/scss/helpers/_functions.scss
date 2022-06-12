@@ -1,0 +1,6 @@
+
+@use "sass:math" as math;
+
+@function mul ($val) {
+    @return $val * 1rem;
+}

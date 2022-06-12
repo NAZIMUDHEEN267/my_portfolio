@@ -1,3 +1,4 @@
+// importing variable module
 @use "../helpers/variables" as var;
 
 * {
@@ -9,6 +10,7 @@
 body {
   scroll-behavior: smooth;
   background: var.$bg;
+  overflow-x: hidden;
 }
 
 li {
@@ -19,8 +21,14 @@ a {
   text-decoration: none;
 }
 
+.width {
+  max-width: 1140px;
+  margin: auto;
+}
+
+// animation class for drop down menu
 .animation {
-  @for $num from 0 to 4 {
+  @for $num from 0 to 5 {
     .link-#{$num} {
       animation: drop 300ms ($num * 60ms) ease-in-out forwards;
     }

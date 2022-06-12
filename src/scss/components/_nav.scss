@@ -1,6 +1,8 @@
+// importing modules
 @use "../helpers/variables" as var;
 @use "../animations/drop" as drop;
 
+// header section
 .header {
   width: 100%;
   background: var.$bg;
@@ -8,9 +10,7 @@
   .nav {
     position: sticky;
     z-index: 10;
-    max-width: 960px;
     padding: 1rem;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     background-color: var.$bg;
@@ -41,6 +41,7 @@
     }
   }
 
+  // drop links for tablet size medias
   .drop__links {
     perspective: 1000px;
     display: none;
@@ -61,6 +62,7 @@
     }
   }
 
+  // bars icon for show tablet links
   .nav__bars {
     display: none;
 

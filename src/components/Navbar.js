@@ -7,7 +7,7 @@ const Navbar = () => {
     const links = (drop) => {
         return (
             <>
-                {["Home", "About", "Services", "Contact"].map((link, i) => {
+                {["Home", "About", "Services", "Projects", "Contact"].map((link, i) => {
                     return <li className={(drop) ? `link-${i}` : "link"} ><a href={link}>{link}</a></li>
                 })}
             </>
@@ -23,7 +23,7 @@ const Navbar = () => {
         <header className="header">
 
             {/* navbar */}
-            <nav className="nav">
+            <nav className="nav width">
                 <div className="nav__name">
                     <a href="#home">
                         <h1>Nazimudheen</h1>
