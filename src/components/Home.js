@@ -7,9 +7,8 @@ import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
 const Home = function () {
     return (
-        <div className="home width" id="home width">
-
-            {/* home text field */}
+        <div className="home width" id="home">
+                  {/* home text field */}
             <div className="home__text">
                 <h3>Hi There, I'm</h3>
                 <h1>Nazimudheen Ti</h1>

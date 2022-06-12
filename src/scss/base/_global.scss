@@ -95,27 +95,23 @@ a {
 
 // headline for container
 .headline {
-  position: relative;
-  text-align: center;
-  font-size: fun.convertor(45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 38%;
-    width: 5%;
-    height: 4%;
+  .left {
+    color: transparent;
+    font-size: 0.3rem;
     background-color: var.$crimson;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 38%;
-    width: 5%;
-    height: 4%;
+  h3 {
+    font-size: fun.convertor(45);
+  }
+
+  .right {
+    font-size: 0.3rem;
+    color: transparent;
     background-color: var.$crimson;
   }
 }
