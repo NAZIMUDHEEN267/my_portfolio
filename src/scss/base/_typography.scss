@@ -1,4 +1,5 @@
 @use "../helpers/variables" as var;
+@use "../helpers/functions" as fun;
 
 // poppins font
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
@@ -18,8 +19,8 @@ a {
 // header section
 .header {
   .nav {
-    &__name {
-      font-size: 1.2rem;
+    &__name h1{
+      font-size: fun.convertor(28);
       letter-spacing: 1px;
     }
 
@@ -45,14 +46,23 @@ a {
     margin-bottom: 1rem;
   }
 
+  :first-child {
+    font-size: fun.convertor(20);
+  }
+
   h1 {
-    font-size: 2.9rem;
+    font-size: fun.convertor(60);
     white-space: no-wrap;
     letter-spacing: 2px;
 
   }
 
+  .wave div {
+    font-size: fun.convertor(28.8);
+  }
+
   p {
+    font-size: fun.convertor(17);
     color: var.$text-light;
     margin-bottom: 2rem;
   }

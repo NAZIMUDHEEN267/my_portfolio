@@ -1,12 +1,13 @@
 import { Wave } from "react-animated-text";
 import dotImg from "../images/dot.png";
+import heroImg from "../images/hero.png";
 import { FaFacebookSquare } from "react-icons/fa";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
 
 const Home = function () {
     return (
-        <div className="home width">
+        <div className="home width" id="home">
 
             {/* home text field */}
             <div className="home__text">
@@ -14,7 +15,7 @@ const Home = function () {
                 <h1>Nazimudheen Ti</h1>
 
                 {/* wave animation library */}
-                <h3>
+                <h3 className="wave">
                     <Wave text="Web Developer" effectChange={.6} speed={5} />
                 </h3>
 
@@ -33,7 +34,7 @@ const Home = function () {
 
                 <div className="hero">
                     <div className="hero__img">
-                        <img src="" alt="" />
+                        <img src={heroImg} alt="hero.jpg" />
                     </div>
 
                     <div className="hero__social">

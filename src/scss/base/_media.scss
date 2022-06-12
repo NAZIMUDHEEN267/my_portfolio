@@ -1,22 +1,42 @@
 // importing mixin module
 @use "../helpers/mixins" as mixin;
+@use "../helpers/functions" as fun;
 
 // header media query
-.header .nav .nav__links {
-    @include mixin.tablet {
+.header {
+  @include mixin.tablet {
+    .nav {
+      .nav__links {
         display: none;
-    }
-}
-
-.header .nav .nav__bars {
-    @include mixin.tablet {
+      }
+      .nav__bars {
         display: block;
+      }
     }
+  }
 }
 
 // home media query
 .home {
-    @include mixin.tablet {
-        flex-direction: column;
+  @include mixin.tablet {
+    flex-direction: column;
+
+    &__text{
+        :first-child {
+            font-size: fun.convertor(16);
+        }
+
+        h1 {
+            font-size: fun.convertor(40);
+        }
+
+        .wave div {
+            font-size: fun.convertor(18);
+        }
+
+        p {
+           font-size: fun.convertor(15);
+        }
     }
+  }
 }
