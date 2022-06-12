@@ -43,10 +43,10 @@ const Home = function () {
                     </div>
 
                     <div className="hero__social">
-                        <FaFacebookSquare />
-                        <AiOutlineTwitter />
-                        <RiLinkedinBoxFill />
-                        <AiFillGithub />
+                        <a href="https://www.facebook.com/ayishath.munavvara/"><FaFacebookSquare /></a>
+                        <a href="https://https://twitter.com/NazimudheenT"><AiOutlineTwitter /></a>
+                        <a href="https://linkedin.com/in/nazimudheen-ti-405a341b1"><RiLinkedinBoxFill /></a>
+                        <a href="https://github.com/nazimudheen267"><AiFillGithub /></a>
                     </div>
                 </div>
             </div>
