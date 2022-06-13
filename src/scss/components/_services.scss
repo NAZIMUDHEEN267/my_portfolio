@@ -1,0 +1,71 @@
+@use "../helpers/variables" as var;
+@use "../helpers/functions" as fun;
+
+.boxes {
+  margin: 5rem 0;
+  padding: 0 fun.mul(2);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(fun.convertor(250), 1fr));
+  grid-gap: 1rem;
+
+  .box {
+    position: relative;
+    background-color: var.$box-clr;
+    padding: 1rem;
+    text-align: center;
+    border: 2px solid transparent;
+    border-radius: fun.convertor(7);
+
+    &:hover {
+      border: 2px solid var.$crimson;
+    }
+
+    .hexagon {
+      transform: translateY(-50px);
+      width: 104px;
+      height: 60px;
+      background-color: var.$crimson;
+      border-color: var.$crimson;
+      position: relative;
+      display: inline-block;
+      transition: all ease-in .2s .2s ;
+
+      &::before {
+        content: " ";
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -30px;
+        left: 0;
+        border-bottom: 30px solid;
+        border-color: inherit;
+        border-left: 52px solid transparent;
+        border-right: 52px solid transparent;
+      }
+
+      &::after {
+        content: "";
+        width: 0;
+        position: absolute;
+        bottom: -30px;
+        left: 0;
+        border-top: 30px solid;
+        border-color: inherit;
+        border-left: 52px solid transparent;
+        border-right: 52px solid transparent;
+      }
+    }
+
+    .box-headline {
+      line-height: 2;
+    }
+
+    .box-para {
+      color: darken($color: var.$white, $amount: 50);
+    }
+
+    &:hover .hexagon {
+        transform: translateY(-45px);
+    }
+  }
+}

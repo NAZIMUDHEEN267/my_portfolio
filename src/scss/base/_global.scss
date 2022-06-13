@@ -1,6 +1,7 @@
 // importing variable module
 @use "../helpers/variables" as var;
 @use "../helpers/functions" as fun;
+@use "../helpers/mixins" as mixin;
 
 * {
   margin: 0;
@@ -70,6 +71,14 @@ a {
 .shadow {
   -webkit-text-stroke: 1px var.$bg-light;
   color: var.$bg;
+
+  @include mixin.tablet {
+    font-size: 6rem !important;
+  }
+
+  @include mixin.mobile {
+    font-size: 3rem !important;
+  }
 }
 
 // animation class for drop down menu
@@ -103,15 +112,32 @@ a {
     color: transparent;
     font-size: 0.3rem;
     background-color: var.$crimson;
+
+    @include mixin.mobile {
+      font-size: 0.2rem;
+    }
   }
 
   h3 {
     font-size: fun.convertor(45);
+
+    @include mixin.tablet {
+      font-size: 4rem !important;
+      font-weight: var.$normal;
+    }
+
+    @include mixin.mobile {
+      font-size: 2rem !important;
+    }
   }
 
   .right {
     font-size: 0.3rem;
     color: transparent;
     background-color: var.$crimson;
+
+    @include mixin.mobile {
+      font-size: 0.2rem;
+    }
   }
 }

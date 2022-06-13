@@ -1,21 +1,13 @@
 
+import Headline from "./Headline.js";
+
 export default function About() {
     return (
         <div className="about container" id="about">
             <div className="width">
-                {/* shadow text */}
-                <h1 className="shadow text-center">
-                    ABOUT
-                </h1>
 
-                {/* headline text */}
-                <div className="headline">
-                    <span className="left">transparent</span>
-                    <h3>
-                        ABOUT
-                    </h3>
-                    <span className="right">transparent</span>
-                </div>
+                {/* headline component */}
+                <Headline text="ABOUT"/>
 
                 {/* description about container */}
                 <div className="description">

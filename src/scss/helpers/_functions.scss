@@ -2,9 +2,9 @@
 @use "sass:math" as math;
 
 @function mul ($val) {
-    @return $val * 1rem;
+    @return ($val * 1rem);
 }
 
 @function convertor ($num) {
-    @return math.div($num, 16) + 0rem;
+    @return (math.div($num, 16) + 0rem);
 }
