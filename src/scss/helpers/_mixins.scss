@@ -14,3 +14,11 @@
         @content;
     }
 }
+
+// light shadow headline
+@mixin light-shadow {
+    h1:first-child {
+        color: var.$bg-light;
+        -webkit-text-stroke: 1px lighten($color: var.$bg-light, $amount: 4);
+      }
+}

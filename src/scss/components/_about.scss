@@ -1,13 +1,12 @@
 @use "../helpers/variables" as var;
 @use "../helpers/functions" as fun;
+@use "../helpers/mixins" as mixin;
 
 .about {
   background-color: var.$bg-light;
 
-  h1:first-child {
-    color: var.$bg-light;
-    -webkit-text-stroke: 1px lighten($color: var.$bg-light, $amount: 4);
-  }
+  // including light shadow color headline
+  @include mixin.light-shadow;
 
   .description {
     text-align: left;

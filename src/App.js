@@ -3,6 +3,7 @@ import Home from "./components/Home.js";
 import "./scss/App.scss";
 import About from "./components/About.js";
 import Services from "./components/Services.js";
+import Experience from "./components/Experience.js";
 
 export default function App () {
     return (<>
@@ -10,5 +11,6 @@ export default function App () {
         <Home />
         <About />
         <Services />
+        <Experience />
     </>)
 }
