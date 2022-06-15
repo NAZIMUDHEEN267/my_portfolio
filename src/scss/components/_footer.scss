@@ -1,0 +1,14 @@
+
+@use "../helpers/variables" as var;
+
+.footer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    color: var.$text-light;
+
+    .social a {
+        margin-left: 2rem;
+        font-size: 1rem;
+    }
+}

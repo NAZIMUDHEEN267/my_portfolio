@@ -57,3 +57,15 @@
     grid-template-rows: repeat(4, fun.convertor(300)) !important;
   }
 }
+
+// footer 
+.footer {
+  @include mixin.tablet {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .social, .copy {
+    margin-bottom: 1rem;
+  }
+}
