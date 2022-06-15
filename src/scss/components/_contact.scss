@@ -1,0 +1,16 @@
+
+@use "../helpers/variables" as var;
+@use "../helpers/mixins" as mixin;
+
+.contact {
+    background: var.$bg-light;
+
+    // shadow headline color change
+    @include mixin.light-shadow;
+
+    .boxes {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+
+}

@@ -1,5 +1,6 @@
 
 // import { useState } from "react";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function PortBox({ img, content }) {
 
@@ -32,7 +33,7 @@ export default function PortBox({ img, content }) {
             <div className="img">
                 <img src={img} alt={img + ".jpg"} />
                 <a href={link} className="link-btn">
-                    link
+                    <FaArrowRight color="#fff"/>
                 </a>
             </div>
             <div className="text">
