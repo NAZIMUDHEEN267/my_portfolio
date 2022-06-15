@@ -1,0 +1,88 @@
+@use "../helpers/functions" as fun;
+@use "../helpers/variables" as var;
+
+.portfolio {
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, fun.convertor(300));
+    grid-gap: 1rem;
+
+    .port-box {
+      height: 100%;
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      background-color: var.$bg-light;
+      border-radius: fun.convertor(10);
+
+      .img {
+        position: relative;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+
+        .link-btn {
+          position: absolute;
+          bottom: 5%;
+          right: 10%;
+          width: fun.convertor(50);
+          height: fun.convertor(50);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: initial;
+          background-color: var.$white;
+          box-shadow: 2px 0px 10px rgba($color: #000000, $alpha: .3);
+          border-radius: 50%;
+        }
+
+        img {
+          width: inherit;
+          height: inherit;
+          border-radius: fun.convertor(10) 0 0 fun.convertor(10);
+          object-fit: fill;
+        }
+      }
+
+      .text {
+        height: inherit;
+        flex: 1;
+        padding: 1rem;
+        overflow-y: hidden;
+
+        h3 {
+          font-size: 1rem;
+          line-height: 2;
+        }
+
+        p {
+          color: var.$text-light;
+          font-size: 1rem;
+        }
+
+        h4 {
+          display: inline-block;
+          margin: 1rem 0;
+          font-weight: var.$normal;
+          border-bottom: 1px solid #fff;
+        }
+
+        li {
+          margin-left: 2rem;
+          list-style: circle;
+        }
+
+        .read-btn {
+          margin-top: 1rem;
+          padding: .4rem .8rem;
+          font-size: .8rem;
+          display: inline-block;
+          background-color: var.$white;
+          cursor: pointer;
+          color: initial;
+        }
+      }
+    }
+  }
+}

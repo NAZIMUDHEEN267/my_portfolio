@@ -24,7 +24,7 @@ export default function Experience() {
 
             {/* ex box component array */}
                 {
-                    data.map((obj) => <ExBox date={obj.date} role={obj.role} description={obj.description} />)
+                    data.map((obj, i) => <ExBox key={i} date={obj.date} role={obj.role} description={obj.description} />)
                 }
         </div>
     )

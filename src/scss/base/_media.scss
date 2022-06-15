@@ -21,29 +21,39 @@
   @include mixin.tablet {
     flex-direction: column;
 
-    &__text{
-        :first-child {
-            font-size: fun.convertor(16);
-        }
+    &__text {
+      :first-child {
+        font-size: fun.convertor(16);
+      }
 
-        h1 {
-            font-size: fun.convertor(40);
-        }
+      h1 {
+        font-size: fun.convertor(40);
+      }
 
-        .wave div {
-            font-size: fun.convertor(18);
-        }
+      .wave div {
+        font-size: fun.convertor(18);
+      }
 
-        p {
-           font-size: fun.convertor(15);
-        }
+      p {
+        font-size: fun.convertor(15);
+      }
     }
   }
 }
 
-// about container 
+// about container
 
 // service container
 .services .box {
-  margin: 3rem 0;
+  @include mixin.tablet {
+    margin: 3rem 0;
+  }
+}
+
+// portfolio container
+.portfolio .boxes {
+  @include mixin.tablet {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(4, fun.convertor(300)) !important;
+  }
 }

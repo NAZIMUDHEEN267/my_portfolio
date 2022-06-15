@@ -1,8 +1,6 @@
 
 export default function Box ({icon, headline, para}) {
-    console.log(icon);
     
-    console.log(icon, headline, para);
     return (
         <div className="box">
             <div className="hexagon">
