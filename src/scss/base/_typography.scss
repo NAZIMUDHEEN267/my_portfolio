@@ -19,7 +19,7 @@ a {
 // header section
 .header {
   .nav {
-    &__name h1{
+    &__name h1 {
       font-size: fun.convertor(28);
       letter-spacing: 1px;
     }
@@ -54,7 +54,6 @@ a {
     font-size: fun.convertor(60);
     white-space: no-wrap;
     letter-spacing: 2px;
-
   }
 
   .wave div {
@@ -74,33 +73,34 @@ a {
   }
 }
 
+// common text
+.sub-headline {
+  border-left: 2px solid var.$crimson;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: var.$medium;
+  margin: var.$mg-y;
+  letter-spacing: 1px;
+}
+
+ul,
+p {
+  margin-left: 2rem;
+}
+
+.short-description {
+  line-height: 1.5rem;
+  color: var.$text-light;
+
+  .light-color {
+    color: darken($color: var.$white, $amount: 20);
+  }
+}
+
 // about section
 .description {
   margin-top: 1rem;
-
-  .sub-headline {
-    border-left: 2px solid var.$crimson;
-    padding-left: 1rem;
-    font-size: 1rem;
-    font-weight: var.$medium;
-    margin: var.$mg-y;
-    letter-spacing: 1px;
-    }   
-  
-  ul, p {
-    margin-left: 2rem;
-  }
-
-  .short-description {
-    line-height: 1.5rem;
-    color: var.$text-light;
-
-    .light-color {
-      color: darken($color: var.$white, $amount: 20);
-    }
-
-    .under-line {
-      border-bottom: 1px solid darken(var.$white, 70);
-    }
+  .under-line {
+    border-bottom: 1px solid darken(var.$white, 70);
   }
 }

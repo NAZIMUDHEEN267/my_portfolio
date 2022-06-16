@@ -58,14 +58,22 @@
   }
 }
 
-// footer 
+// contact
+.contact .boxes {
+  @include mixin.tablet {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+// footer
 .footer {
   @include mixin.tablet {
     align-items: center;
     flex-direction: column;
   }
 
-  .social, .copy {
+  .social,
+  .copy {
     margin-bottom: 1rem;
   }
 }

@@ -1,16 +1,81 @@
-
 @use "../helpers/variables" as var;
 @use "../helpers/mixins" as mixin;
+@use "../helpers/functions" as fun;
 
 .contact {
-    background: var.$bg-light;
+  background: var.$bg-light;
 
-    // shadow headline color change
-    @include mixin.light-shadow;
+  // shadow headline color change
+  @include mixin.light-shadow;
 
-    .boxes {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
+  .boxes {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem 0;
+
+    > * {
+      background: var.$con-box;
+      padding: 1.4rem;
     }
 
+    .box-1 .social {
+      margin-top: 2rem;
+
+      a {
+        margin-left: 1rem;
+        font-size: 1.2rem;
+      }
+    }
+
+    .box-2 {
+      div,
+      input, textarea {
+        width: 100%;
+        border-radius: fun.convertor(5);
+      }
+
+      input, textarea {
+          color: var.$white;
+      }
+
+      input, textarea {
+        padding: 0.6rem;
+        background: transparent;
+        outline: none;
+        border: 1px solid var.$text-light;
+        font-weight: var.$medium;
+    }
+
+      .user {
+        display: flex;
+
+        .name {
+            margin-right: 1rem;
+        }
+      }
+
+      .subject {
+          margin: 1rem 0;
+      }
+
+      .message textarea {
+        resize: vertical;
+        margin-bottom: 1rem;
+      }
+
+      .btn {
+          width: 30%;
+          font-weight: var.$medium;
+
+          span {
+              color: initial;
+              font-size: 1rem;
+          }
+
+          &:hover span {
+              color: var.$white;
+          }
+      }
+    }
+  }
 }

@@ -7,6 +7,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, fun.convertor(300));
     grid-gap: 1rem;
+    margin: 1rem 0;
 
     .port-box {
       height: 100%;
