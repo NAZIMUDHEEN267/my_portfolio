@@ -63,6 +63,12 @@
   @include mixin.tablet {
     grid-template-columns: 1fr !important;
   }
+
+  @include mixin.mobile {
+    .box-2 .btn span {
+      font-size: .7rem !important;
+    }
+  }
 }
 
 // footer
