@@ -18,14 +18,15 @@ export default function Experience() {
 
     return (
         <div className="experience container">
-
-            {/* headline component */}
+            <div className="width">
+                {/* headline component */}
                 <Headline text="EXPERIENCE" />
 
-            {/* ex box component array */}
+                {/* ex box component array */}
                 {
                     data.map((obj, i) => <ExBox key={i} date={obj.date} role={obj.role} description={obj.description} />)
                 }
+            </div>
         </div>
     )
 }

@@ -6,6 +6,11 @@
 .header {
   @include mixin.tablet {
     .nav {
+
+      a {
+        font-size: 1.7rem !important;
+      }
+
       .nav__links {
         display: none;
       }
@@ -21,7 +26,16 @@
   @include mixin.tablet {
     flex-direction: column;
 
+    
     &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      
+      .home-shadow {
+        top: 7% !important;
+      }
+
       :first-child {
         font-size: fun.convertor(16);
       }
@@ -37,6 +51,30 @@
       p {
         font-size: fun.convertor(15);
       }
+
+      .btn {
+        display: flex;
+        justify-content: center;
+        width: 30%;
+
+        a {
+          font-size: .7rem;
+        }
+      }
+
+      @include mixin.mobile {
+        h1 {
+          font-size: 1.7rem;
+        }
+
+        p {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .home__img {
+      display: none;
     }
   }
 }
@@ -61,12 +99,26 @@
 // contact
 .contact .boxes {
   @include mixin.tablet {
-    grid-template-columns: 1fr !important;
+    grid-template-columns: minmax(fun.convertor(250), 1fr) !important;
   }
 
   @include mixin.mobile {
-    .box-2 .btn span {
-      font-size: .7rem !important;
+    ul {
+      margin-left: 0;
+    }
+
+    p {
+      margin-left: 0.5rem;
+    }
+
+    .box-2 .btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        font-size: 0.7rem !important;
+      }
     }
   }
 }

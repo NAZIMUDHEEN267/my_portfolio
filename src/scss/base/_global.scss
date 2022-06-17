@@ -12,7 +12,7 @@
 body {
   scroll-behavior: smooth;
   background: var.$bg;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 li {
@@ -65,6 +65,10 @@ a {
 .width {
   max-width: 1140px;
   margin: 0 auto;
+
+  @media (max-width: 570px) {
+    padding: 1rem;
+  }
 }
 
 // shadow text

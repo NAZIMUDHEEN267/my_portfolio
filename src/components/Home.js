@@ -26,7 +26,7 @@ const Home = function () {
                 <p> Passionate in building new things, moving on "MERN" stack developer </p>
 
                 <button className="btn">
-                    <a href="#contact">contact me</a>
+                    <a href="#contact">contact</a>
                 </button>
             </div>
 
