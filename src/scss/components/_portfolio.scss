@@ -10,6 +10,7 @@
     margin: 1rem 0;
 
     .port-box {
+      scrollbar-color: red yellow;
       height: 100%;
       display: flex;
       gap: 1rem;
@@ -34,7 +35,7 @@
           justify-content: center;
           color: initial;
           background-color: var.$crimson;
-          box-shadow: 2px 0px 10px rgba($color: #000000, $alpha: .3);
+          box-shadow: 2px 0px 10px rgba($color: #000000, $alpha: 0.3);
           border-radius: 50%;
         }
 
@@ -50,7 +51,7 @@
         height: inherit;
         flex: 1;
         padding: 1rem;
-        overflow-y: hidden;
+        overflow-y: scroll;
 
         h3 {
           font-size: 1rem;
@@ -76,13 +77,21 @@
 
         .read-btn {
           margin-top: 1rem;
-          padding: .4rem .8rem;
-          font-size: .8rem;
+          padding: 0.4rem 0.8rem;
+          font-size: 0.8rem;
           display: inline-block;
           background-color: var.$white;
           cursor: pointer;
           color: initial;
         }
+      }
+
+      .text::-webkit-scrollbar  {
+        background-color: transparent;
+      }
+
+      .text::-webkit-scrollbar-thumb {
+        background: linear-gradient(360deg,#949494 10%,#efefef 360%);;
       }
     }
   }

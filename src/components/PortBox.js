@@ -10,11 +10,9 @@ export default function PortBox({ img, content }) {
     // state using
     const [more, setMore] = useState(true);
     // selecting read button
-    const buttons = document.querySelector('.read-btn');
 
-    buttons.onclick = (e) => {
+    const click = () => {
         setMore(!more);
-        console.log("lo");
     }
 
     return (
@@ -29,7 +27,7 @@ export default function PortBox({ img, content }) {
                 <h3>{headline}</h3>
                 <p>{more ? text.slice(0, 100) + "..." : text}</p>
                 <div>{more ? "" : list}</div>
-                <span className="read-btn">
+                <span className="read-btn" onClick={click}>
                     {more ? "Read more..." : "Show less"}
                 </span>
             </div>
