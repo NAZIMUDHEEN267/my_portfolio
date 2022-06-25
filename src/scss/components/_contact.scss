@@ -66,9 +66,12 @@
       .btn {
           width: 30%;
           font-weight: var.$medium;
-          text-align: center;
 
           span {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: .4rem;
               color: initial;
               font-size: 1rem;
           }

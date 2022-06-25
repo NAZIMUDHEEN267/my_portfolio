@@ -1,10 +1,28 @@
 import Headline from "./Headline";
 import { RiFacebookFill, RiLinkedinBoxFill } from "react-icons/ri";
-import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
+import { AiFillGithub, AiOutlineTwitter, AiOutlineArrowRight } from "react-icons/ai";
+import emailjs from "emailjs-com";
+import { useRef } from "react";
 
 export default function Contact() {
 
+    // color function
     const clr = () => { return { color: "#919AA2" } }
+
+    // form variable as useref hook
+    const form = useRef();
+
+    // onsubmit function for before sending contact form
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm("service_6jbwamb", "template_kgwfwkq", form.current, "RYLznI6WeTK8zDFg-")
+        .then((success) => {
+            console.log(success);
+        }).catch((fail) => {
+            console.log(fail);
+        })
+    }
 
     return (
         <div className="contact container" id="Contact">
@@ -53,7 +71,7 @@ export default function Contact() {
                         </h3>
 
                         {/* form for user contact submission */}
-                        <form action="" className="form" id="form">
+                        <form action="" className="form" id="form" ref={form} onSubmit={sendEmail}>
 
                             <div className="user">
                                 <div className="name">
@@ -73,7 +91,7 @@ export default function Contact() {
                             </div>
 
                             <button type="submit" form="form" className="btn">
-                                <span>Contact</span>
+                                <span>Submit <AiOutlineArrowRight style={{fontSize: '1rem'}}/> </span>
                             </button>
                         </form>
                     </div>
