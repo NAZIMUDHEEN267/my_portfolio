@@ -3,7 +3,7 @@ import Headline from "./Headline.js";
 
 export default function About() {
     return (
-        <div className="about container" id="about">
+        <div className="about container" id="About">
             <div className="width">
 
                 {/* headline component */}

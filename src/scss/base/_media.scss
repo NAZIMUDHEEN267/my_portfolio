@@ -25,6 +25,7 @@
 .home {
   @include mixin.tablet {
     flex-direction: column;
+    height: 50vh !important ;
 
     
     &__text {

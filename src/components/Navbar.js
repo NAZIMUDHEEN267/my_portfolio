@@ -1,5 +1,6 @@
 
-import { GoThreeBars } from "react-icons/go"
+import { GoThreeBars } from "react-icons/go";
+import ScrollIntoView from "react-scroll-into-view";
 
 const Navbar = () => {
 
@@ -7,8 +8,12 @@ const Navbar = () => {
     const links = (drop) => {
         return (
             <>
-                {["Home", "About", "Services", "Projects", "Contact"].map((link, i) => {
-                    return <li className={(drop) ? `link-${i}` : "link"} key={i} ><a href={link}>{link}</a></li>
+                {["#Home", "#About", "#Services", "#Experience", "#Portfolio", "#Contact"].map((link, i) => {
+                return (
+                    <ScrollIntoView selector={link} smooth={true}>
+                        <li className={(drop) ? `link-${i}` : "link"} key={i}>{link.slice(1, link.length)}</li>
+                    </ScrollIntoView>
+                )
                 })}
             </>
         )

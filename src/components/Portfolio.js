@@ -6,6 +6,7 @@ import Disney from "../images/disney.png";
 import Ttt from "../images/ttt.png";
 
 export default function Portfolio() {
+    
     const data = {
         box1: {
             img: { Janaseva },
@@ -99,7 +100,7 @@ export default function Portfolio() {
     const { box1, box2, box3, box4 } = data;
 
     return (
-        <div className="portfolio container">
+        <div className="portfolio container" id="Portfolio">
             <div className="width">
                 {/* headline component */}
                 <Headline text="PORTFOLIO" />

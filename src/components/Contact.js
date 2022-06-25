@@ -7,7 +7,7 @@ export default function Contact() {
     const clr = () => { return { color: "#919AA2" } }
 
     return (
-        <div className="contact container">
+        <div className="contact container" id="Contact">
             <div className="width">
                 {/* headline component */}
                 <Headline text="CONTACT" />

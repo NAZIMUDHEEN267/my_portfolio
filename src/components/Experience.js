@@ -17,7 +17,7 @@ export default function Experience() {
     ];
 
     return (
-        <div className="experience container">
+        <div className="experience container" id="Experience">
             <div className="width">
                 {/* headline component */}
                 <Headline text="EXPERIENCE" />

@@ -4,11 +4,12 @@ import heroImg from "../images/hero.png";
 import { FaFacebookSquare } from "react-icons/fa";
 import { RiLinkedinBoxFill } from "react-icons/ri";
 import { AiFillGithub, AiOutlineTwitter } from "react-icons/ai";
+import ScrollIntoView from "react-scroll-into-view";
 
 const Home = function () {
     return (
-        <div className="home width" id="home">
-                  {/* home text field */}
+        <div className="home width" id="Home">
+            {/* home text field */}
             <div className="home__text">
                 <h3>Hi There, I'm</h3>
                 <h1>Nazimudheen Ti</h1>
@@ -25,9 +26,11 @@ const Home = function () {
 
                 <p> Passionate in building new things, moving on "MERN" stack developer </p>
 
-                <button className="btn">
-                    <a href="#contact">contact</a>
-                </button>
+                <ScrollIntoView selector="#Contact" smooth={true}>
+                    <button className="btn">
+                        <a href="#contact">contact</a>
+                    </button>
+                </ScrollIntoView>
             </div>
 
             {/* home hero section */}

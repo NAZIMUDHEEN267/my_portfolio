@@ -33,7 +33,7 @@ export default function Services() {
     ]
 
     return (
-        <div className="services container">
+        <div className="services container" id="Services">
             <div className="width">
                 {/* headline component */}
                 <Headline text="SERVICES" />
