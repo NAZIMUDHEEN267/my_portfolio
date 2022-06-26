@@ -9,7 +9,8 @@ import Contact from "./components/Contact.js";
 import Footer from "./components/Footer.js";
 
 export default function App () {
-    return (<>
+    return (
+        <>
         <Navbar />
         <Home />
         <About />

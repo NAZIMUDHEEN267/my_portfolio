@@ -3,38 +3,36 @@ import { RiFacebookFill, RiLinkedinBoxFill } from "react-icons/ri";
 import { AiFillGithub, AiOutlineTwitter, AiOutlineArrowRight } from "react-icons/ai";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Contact() {
-
-    const siteKey = "6LfrkZ4gAAAAAK4nmBZ2so98rJ_lUF-YE_tDJ2lm";
-    const privateKey = "6LcyvJ0gAAAAAA2uiaEJAXdVVK5YMsI3E0FSlMT3";
 
     // color function
     const clr = () => { return { color: "#919AA2" } }
 
     // form variable as useref hook
     const form = useRef();
-
+ 
     // onsubmit function for before sending contact form
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs.sendForm("service_6jbwamb", "template_kgwfwkq", form.current, "RYLznI6WeTK8zDFg-")
             .then((success) => {
-                console.log(success);
-            }).catch((fail) => {
-                console.log(fail);
-            })
+                alert("your mail has been sended to nazimudheen");
 
-        // blank the input field when user click the submit button
-        // const allInput = document.querySelectorAll("#name, #email, #message, #subject");
-        // allInput.forEach((input) => input.value = "")
+                // clear the input field
+                const inputs = document.querySelectorAll("#email, #subject, #name, #message");
+                for (const input of inputs.values()) {
+                    input.value = ""
+                }
+            }).catch((fail) => {
+                alert("some error occurred!!")
+            })
     }
     // recaptcha function
-    function onChange (value) {
-        console.log(value);
-    }
+    // function onChange (value) {
+    //     console.log(value);
+    // }
 
     return (
         <div className="contact container" id="Contact">
@@ -101,11 +99,6 @@ export default function Contact() {
                             <div className="message">
                                 <textarea name="message" id="message" cols="30" rows="5" placeholder="Your message *" required></textarea>
                             </div>
-
-                            {/* <ReCAPTCHA
-                                siteKey={siteKey}
-                                onChange={onChange}
-                            ></ReCAPTCHA> */}
 
                             <button type="submit" form="form" className="btn">
                                 <span>Submit <AiOutlineArrowRight style={{ fontSize: '1rem' }} /> </span>
