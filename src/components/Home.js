@@ -8,7 +8,7 @@ import ScrollIntoView from "react-scroll-into-view";
 
 const Home = function () {
     return (
-        <div className="home width" id="Home">
+        <div className="home container width" id="Home">
             {/* home text field */}
             <div className="home__text">
                 <h3>Hi There, I'm</h3>

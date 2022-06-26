@@ -34,7 +34,8 @@ a {
   color: initial;
   border-radius: 0.3rem;
 
-  a, span {
+  a,
+  span {
     position: relative;
     z-index: 3;
     color: initial;
@@ -87,7 +88,7 @@ a {
 
 // animation class for drop down menu
 .animation {
-  @for $num from 0 to 5 {
+  @for $num from 0 to 6 {
     .link-#{$num} {
       animation: drop 300ms ($num * 60ms) ease-in-out forwards;
     }
