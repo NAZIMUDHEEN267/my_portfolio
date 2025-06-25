@@ -1,0 +1,18 @@
+@use './variables/colors' as vars;
+
+@use './components/common/navbar.scss';
+@use './components/home';
+@use './components/about';
+@use './components/experience';
+@use './components/footer.scss';
+
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+  margin: 0;
+  background-color: vars.$bg2;
+}
+

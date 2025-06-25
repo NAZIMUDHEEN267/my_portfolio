@@ -1,0 +1,18 @@
+@use '../variables/colors.scss' as clr;
+@use './common/navbar.scss' as nav;
+
+.footer {
+    color: clr.$white;
+    background-color: clr.$primary;
+
+    &__content {
+        height: 100px;
+        @include nav.nav;
+        align-items: center;
+    }
+
+    .mail {
+        text-align: right;
+        margin-right: 40px;
+    }
+}

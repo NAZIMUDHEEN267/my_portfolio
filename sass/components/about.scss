@@ -1,0 +1,50 @@
+@use '../variables/colors.scss' as clr;
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    * {
+        margin: 0;
+    }
+    
+    &__text {
+        margin-right: 2rem;
+        text-align: left;
+
+        h2 {
+            font-family: var(--font-poppins), sans-serif;
+            font-size: 1.4rem;
+            color: black;
+        }
+
+        p {
+            color: clr.$primary;
+            line-height: 1.5;
+        }
+    }
+
+    &__bullets {
+        display: flex;
+        margin-top: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 1rem;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: .6rem;
+            color: clr.$primary;
+        }
+    }
+}
+
+.icon {
+    background-color: black;
+    min-width: 25px;
+    min-height: 25px;
+    display: grid;
+    place-content: center;
+    border-radius: 100%;
+}
