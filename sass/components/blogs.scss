@@ -1,0 +1,38 @@
+@use '../variables/colors.scss' as clr;
+
+.blogs {
+    * {
+        margin: 0;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .headline {
+            .bullet {
+                width: 7px;
+                height: 7px;
+                background: #000;
+                border-radius: 100%;
+            }
+
+            display: flex;
+            align-items: center;
+            font-size: .8rem;
+            gap: .2rem;
+            margin-bottom: .4rem;
+            background-color: clr.$bg;
+            padding: 3px 8px;
+            border-radius: 10px;
+        }
+
+        .works {
+            font-size: 1.5rem;
+            font-family: var(--font-poppins), sans-serif;
+            line-height: 1.2;
+        }
+    }
+}

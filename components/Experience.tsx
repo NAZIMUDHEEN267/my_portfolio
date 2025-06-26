@@ -1,4 +1,3 @@
-import React from 'react'
 
 function Experience() {
     return (
@@ -34,7 +33,7 @@ function Experience() {
                     </div>
                 </div>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus incidunt atque expedita recusandae aspernatur iusto, sunt mollitia quaerat impedit a minima, in repellendus fugiat assumenda similique rerum necessitatibus ipsum maiores!
+                    Engineered a robust hybrid software solution for Diginest Solutions using React Native and JavaScript, ensuring seamless cross-platform functionality. Designed, developed, and maintained mobile and web applications tailored to diverse client needs, while actively collaborating on frontend development and ongoing feature enhancements.
                 </div>
                 <div className='btn__container'>
                     <div className='btn'>React Native</div>
@@ -47,20 +46,21 @@ function Experience() {
 
             <div className="experience__item">
                 <div>
-                    <h3>React Developer, Kalamessery, Eranakulam</h3>
+                    <h3>React Developer, Aluva, Eranakulam</h3>
                     <div className='headline'>
                         <div className="bullet" />
                         <span>January 2025 - Present</span>
                     </div>
                 </div>
                 <div>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus incidunt atque expedita recusandae aspernatur iusto, sunt mollitia quaerat impedit a minima, in repellendus fugiat assumenda similique rerum necessitatibus ipsum maiores!
+                    Collaborated with the product team to develop ERP modules, focusing on HR and payroll management features. Built and maintained scalable user interfaces using React, TypeScript, and Redux Toolkit, with reusable components and centralized state management for consistent data flow. Worked alongside backend engineers and QA to ensure smooth feature delivery and rapid issue resolution.
                 </div>
                 <div className='btn__container'>
                     <div className='btn'>React</div>
                     <div className='btn'>Typescript</div>
                     <div className='btn'>Tailwindcss</div>
                     <div className='btn'>Context api</div>
+                    <div className='btn'>Server hosting</div>
                 </div>
             </div>
         </div>
