@@ -1,28 +1,18 @@
-import { GetStaticProps } from 'next'
 import Image from 'next/image'
 import React from 'react'
 
 
 type Props = {
-    items: {
-        image: string;
-        title: string;
-        read: number;
-        type: string;
-    }[]
-}
+    image: string;
+    title: string;
+    read: number;
+    type: string;
+}[]
 
-export const getStaticProps: GetStaticProps<Props> = () => {
-    return {
-        props: {
-            items: []
-        },
-        revalidate: false
-    }
-}
+function Blogs() {
 
+    const items: Props = [{ image: '', title: '', read: 2, type: '' }];
 
-function Blogs({ items }: Props) {
     return (
         <div className='container blogs'>
             <div className='header'>
@@ -35,14 +25,14 @@ function Blogs({ items }: Props) {
 
             {
                 items?.map(({ image, title, read, type }) => (
-                    <BlogCards image={image} title={title} read={read} type={type} />
+                    <BlogCards key={title} image={image} title={title} read={read} type={type} />
                 ))
             }
         </div>
     )
 }
 
-const BlogCards = ({ image, title, read, type }: Props['items']) => (
+const BlogCards = ({ image, title, read, type }: Props) => (
     <div className='blog__card'>
         <div className="image">
             <Image src={image} alt='image.png' fill />

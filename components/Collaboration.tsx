@@ -80,8 +80,8 @@ function Collaboration() {
             <div className="work_items">
                 {
                     data?.slice(0, !clicked ? 3 : data.length).map((item, i) => (
-                        <div>
-                            <a key={i} className="work__item" href={item?.path}>
+                        <div key={i}>
+                            <a className="work__item" href={item?.path}>
                                 <div className="image-container">
                                     <Image
                                         src={item?.link}
