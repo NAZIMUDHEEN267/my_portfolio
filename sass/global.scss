@@ -5,7 +5,7 @@
 @use './components/about';
 @use './components/experience';
 @use './components/blogs';
-@use './components/collab';
+@use './components/collab.scss';
 @use './components/footer.scss';
 
 
@@ -18,3 +18,7 @@ body {
   background-color: vars.$bg2;
 }
 
+a {
+  text-decoration: none;
+  color: vars.$primary;
+}

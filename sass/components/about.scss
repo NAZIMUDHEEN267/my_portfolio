@@ -1,13 +1,19 @@
 @use '../variables/colors.scss' as clr;
+@use '../mixins/media.scss' as mix;
+
 
 .about {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+
+    @include mix.responsive(medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
 
     * {
         margin: 0;
     }
-    
+
     &__text {
         margin-right: 2rem;
         text-align: left;

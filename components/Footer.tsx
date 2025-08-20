@@ -1,7 +1,7 @@
 function Footer() {
     return (
         <div className='footer'>
-            <div className="footer__content">
+            <div className="footer__content" id="about">
                 <ul className='links'>
                     <li>
                         About Me

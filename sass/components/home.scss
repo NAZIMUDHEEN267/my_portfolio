@@ -1,11 +1,19 @@
 @use '../variables/colors.scss' as clr;
+@use '../mixins/media.scss' as mix;
+
 
 .home {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+    padding-top: 30px;
 
-    * {
+    @include mix.responsive(medium) {
+        grid-template-columns: 1fr;
+        padding-top: 0px;
+    }
+
+    >* {
         margin: 0;
     }
 
@@ -14,6 +22,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        @include mix.responsive(medium) {
+            flex-direction: row;
+            padding-left: 0rem;
+        }
 
         .content {
             display: grid;
@@ -51,6 +64,19 @@
                 color: clr.$primary;
                 margin-left: .6rem;
             }
+        }
+    }
+
+    .column__2 {
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        @include mix.responsive(medium) {
+            display: none;
         }
     }
 }

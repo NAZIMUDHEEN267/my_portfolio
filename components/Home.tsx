@@ -8,7 +8,7 @@ function Home() {
 
                 <div className="content">
                     <div className='project'>
-                        <h2>+200</h2>
+                        <h2>+7</h2>
                         <p>Project contributed</p>
                     </div>
                     <div className='work'>
@@ -24,7 +24,7 @@ function Home() {
             </div>
 
             <div className='column__2'>
-                <div style={{ position: 'relative', width: '100%', height: '100%' }}>
+                <div className='hero'>
                     <Image
                         src={'/user.png'}
                         fill
